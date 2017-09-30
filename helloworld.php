@@ -195,11 +195,32 @@ switch ($favcolor) {
         echo "<br>You has no favorite color!";
 }
 
-// LOOPS
+// WHILE DO WHILE LOOP
+$w = 1;
+
+while($w <= 5) {
+    echo "<br>Num is $w";
+    $w++;
+}
+
+$d = 1;
+
+do {
+    echo "<br>The num is $d";
+    $d++;
+} while ($d <= 5);
 
 
+// FOR FOREACH LOOP
+for ($f = 0; $f <= 5; $f++) {
+    echo "<br>The number is $f";
+}
 
+$colors = array("red", "green", "blue", "yellow");
 
+foreach ($colors as $value) {
+    echo "<br>$value";
+}
 
 
 
