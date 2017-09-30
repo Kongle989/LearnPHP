@@ -95,9 +95,107 @@ print $txt1 . $txt2 . $txt3;
  *                 first arg chars to replace
  *                 second arg replace with this
  *                 third arg string to do the replacing
- *
  */
 
+/* CONSTANT
+ * create using define() function
+ * first arg is name, no dollar sign
+ * second arg is value
+ * constant is not case sensitive
+ * a constant is always global
+ */
+
+/* ARITHMETIC OPERATORS
+ * + add
+ * - subtract
+ * * multiply
+ * / divide
+ * % modulus
+ * ** exponent
+*/
+
+/* ASSIGNMENT OPERATORS
+ * = assign right to left
+ * += add right to left
+ * -= subtract right from left
+ * *= multiply right to left
+ * /= divide right from left
+ * %= modulus right from left
+ */
+
+/* COMPARISON OPERATORS
+ * == returns true if equal
+ * === returns true if equal and same type
+ * != or <> returns true if not equal, false if equals
+ * !== returns true if not equal or equal but not same type
+ * > returns true if greater than
+ * < returns true if less than
+ * >= returns true if greater than or equal to
+ * <= returns true if less than or equal to
+ */
+
+/* INCREMENT / DECREMENT OPERATORS
+ * ++$x increments by one then returns
+ * $x++ returns then increments by one
+ * --$x decrements by one then returns
+ * $x-- returns then decrements by one
+ */
+
+/* LOGICAL OPERATORS
+ * and && - true if both are true
+ * or || - true if either or is true
+ * xor - true if either or is true but not both
+ * ! - true if not true
+ */
+
+/* STRING OPERATORS
+ * . concatenation
+ * .= concatenate and assign
+ */
+
+/* ARRAY OPERATORS
+ * + combine two arrays
+ * === returns true if same value same type and same order
+ */
+
+// IF ELSE IF ELSE STATEMENTS
+$t = date("H"); // Current time (hour)
+
+if ($t < "20") {
+    echo "<br>Have a good day!";
+} else {
+    echo "<br>Have a good night!";
+}
+
+if ($t < "10") {
+    echo "<br>Have a good morning!";
+} elseif ($t < "20") {
+    echo "<br>Have a good day!";
+} else {
+    echo "<br>Have a good night!";
+}
+
+// SWITCH STATEMENT
+$favcolor = "yellow";
+
+switch ($favcolor) {
+    case "red":
+        echo "<br>Your fav color is red!";
+        break;
+    case "blue":
+        echo "<br>Your fav color is blue!";
+        break;
+    case "yellow":
+        echo "<br>Your fav color is yellow!";
+        break;
+    case "green":
+        echo "<br>Your fav color is green!";
+        break;
+    default:
+        echo "<br>You has no favorite color!";
+}
+
+// LOOPS
 
 
 
