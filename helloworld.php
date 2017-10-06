@@ -23,14 +23,15 @@ echo $x;
 
 echo "<br>Hello World!<br>";
 
-$txt  = "coding";
+$txt = "coding";
 echo "I love $txt!<br>"; // PHP var can be used inline without escaping
 
 
 $a = 5;
 $b = 10;
 
-function myTest() {
+function myTest()
+{
     // Use global keyword to access global var inside functions
     global $a, $b;
     $b = $a + $b;
@@ -39,7 +40,8 @@ function myTest() {
 myTest();
 echo $b; // Outputs 15
 
-function myTest2() {
+function myTest2()
+{
     // Static keyword prevents var inside
     // function from being deleted after function end
     static $c = 0;
@@ -198,7 +200,7 @@ switch ($favcolor) {
 // WHILE DO WHILE LOOP
 $w = 1;
 
-while($w <= 5) {
+while ($w <= 5) {
     echo "<br>Num is $w";
     $w++;
 }
@@ -222,7 +224,83 @@ foreach ($colors as $value) {
     echo "<br>$value";
 }
 
+// User defined functions
+function writeMsg()
+{
+    echo "<br>Hello World!";
+}
 
+writeMsg();
+
+// Function with arguments
+function familyName($fname)
+{
+    echo "<br>$fname Refsnes.";
+}
+
+familyName("Ding");
+familyName("Dong");
+
+function familyName2($fname, $year)
+{
+    echo "<br>$fname Refsnes. Born in $year";
+}
+
+familyName2("Le", "1988");
+
+// Default Argument
+function setHeight($minheight = 50)
+{
+    echo "<br>The height is: $minheight";
+}
+
+setHeight(30);
+setHeight();
+
+// Function Return
+function sum($x, $y)
+{
+    $z = $x + $y;
+    return $z;
+}
+
+echo "<br>5 + 10 = " . sum(5, 10);
+
+// Array
+$cars = array("Volvo", "BMW", "Honda");
+echo "<br>I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+
+// count() return the length of an array
+$arrlength = count($cars);
+
+for ($x = 0; $x < $arrlength; $x++) {
+    echo "<br>" . $cars[$x];
+}
+
+// Associative Array
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+// or
+$age['Sam'] = "15";
+$age['Jess'] = "18";
+$age['John'] = "25";
+
+echo "<br>" . count($age);
+echo "<br>" . $age['Peter'];
+echo "<br>" . $age['Jess'];
+
+// Use foreach loop to go through associative array
+foreach ($age as $x => $x_value) {
+    echo "<br>Key: $x, Value: $x_value";
+}
+
+/* ARRAY SORT FUNCTION
+ * sort() - ascending order
+ * rsort() - decending order
+ * asort() - sort associative array ascending base on value
+ * ksort() - sort associative array ascending base on key
+ * arsort() - sort associative array descending base on value
+ * krsort() - sort associative array descensing base on key
+ */
 
 
 ?><!-- End php script-->
